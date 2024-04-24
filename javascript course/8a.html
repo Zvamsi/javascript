@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+   <head>
+      <title>
+
+      </title>
+      <script>
+         function comparePrice(product1,product2){
+            if(product1.price<product2.price){
+               return product1;
+            }
+            return product2;
+         }
+      </script>
+   </head>
+   <body>
+      <script>
+         const basketBall={
+            price:2095
+         };
+         console.log(basketBall);
+         basketBall.price=basketBall.price+500;
+         console.log(basketBall);
+         basketBall['delivery-time']='3 Days';
+         console.log(basketBall);
+
+         const ball1={
+            name:'Nike Ball',
+            price:2099
+         };
+         const ball2={
+            price:1999,
+            name:'Puma Ball'
+         };
+         console.log(comparePrice(ball1,ball2));
+      </script>
+   </body>
+</html>

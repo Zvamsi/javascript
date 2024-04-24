@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>last one</title>
+   </head>
+   <body>
+      
+      <script>
+         function countWords(words){
+            let result={};
+            for(let i=0;i<words.length;i++){
+               let word=words[i];
+               if(result[word]){
+                  result[word]++;
+
+               }else{
+                  result[word]=1;
+               }
+            }
+            return result;
+         }
+         console.log(countWords(['apple','grape','cake','apple','cake','banana']));
+      </script>
+   </body>
+</html>

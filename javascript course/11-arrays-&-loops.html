@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>
+         arrays and loops
+      </title>
+   </head>
+   <body>
+      <script>
+         /*
+         const myarray=[10,20,"hello",[1,2,3],30,{name:"vamshi"}];
+         console.log(myarray);
+         console.log(typeof(myarray[0]));
+         myarray[0]="$";
+         console.log(typeof(myarray[3]));
+         console.log(Array.isArray(myarray[3]))
+         console.log(myarray[3].length);
+         myarray.push(100);
+         console.log(myarray);
+         myarray.pop(0);
+         console.log(myarray);
+         console.log(myarray.splice(0,2));//num of values remove
+         console.log(myarray);
+
+         *//*
+        let i=1;
+        while(i<=5){
+         console.log(i);
+         i++;
+        }
+        for(i=1;i<=5;i++){
+         console.log(i);
+        }
+        let rand=0;
+        while(rand<0.5){
+         rand=Math.random();
+        }console.log(rand);*/
+
+        /*let array=["hello","hii",'ohio',"ciao"];
+        for(let i=0;i<array.length;i++){
+         console.log(array[i]);
+        }*/
+       /* const array_num=[1,2,3,4,5];
+        let result=0;
+        for(let i=0;i<array_num.length;i++){
+         result=result+array_num[i];
+        }
+        console.log(result);
+
+        const array_num2=[];
+        for(let i=0;i<array_num.length;i++){
+         num=array_num[i]*2
+         array_num2.push(num);
+        }
+        console.log(array_num);
+        console.log(array_num2);*/
+
+        const array1=[1,2,3,4,5];
+        const array2=array1.splice();
+        array2.push(6);
+        console.log(array1);
+        console.log(array2);
+
+        const [firstvalue,secondvalue]=[1,2,3];
+        console.log(firstvalue);
+
+        for(let index=0;index<=10;index++){
+         
+         if(index%3==0){
+            continue;
+         }console.log(index);
+         if(index==8){
+            break;
+         }
+        }
+
+        index=1;
+        while(index<=10){
+         if(index%3===0){
+            index++
+            continue;
+         }
+         console.log(index);
+         index++
+        }
+        function doubleArray(array_num){
+        const array_num2=[];
+        for(let i=0;i<array_num.length;i++){
+         if(array_num[i]===0){
+            return array_num2;
+         }
+         num=array_num[i]*2
+         array_num2.push(num);
+        }
+        return array_num2;
+        }
+        
+        console.log(doubleArray([1,2,10,0,5]));
+        doubleArray(["hello","hey"]);
+      </script>
+   </body>
+</html>

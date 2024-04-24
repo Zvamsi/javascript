@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>cart quantity</title>
+    <script>
+      function updateCart(x) {
+        if (cartQuantity <= 0) {
+          cartQuantity = 0;
+        }
+        if (cartQuantity >= 10 - x + 1) {
+          document.querySelector(".displayQual2").innerHTML="cart is full";
+          return;
+        }
+        cartQuantity += x;
+        document.querySelector(".displayQual").innerHTML="cart quantity:" + cartQuantity;
+        document.querySelector(".displayQual2").innerHTML="";
+      }
+    function downCart(x){
+      cartQuantity-=x;
+    if(cartQuantity>=0){
+      document.querySelector(".displayQual").innerHTML='cart Quantity:'+cartQuantity;
+      document.querySelector(".displayQual2").innerHTML='';
+      return;
+    } 
+    document.querySelector(".displayQual").innerHTML='cart Quantity:'+0;
+      document.querySelector(".displayQual2").innerHTML='Not enough items in the cart';
+    }
+    </script>
+  </head>
+  <body>
+    <button onclick="document.querySelector('.displayQual').innerHTML='cart quantity:'+ cartQuantity;">
+      Show Quantity
+    </button>
+    <br /><br />
+    <button onclick="updateCart(1);">Add to Cart</button>
+
+    <button onclick="updateCart(2);">+2</button>
+
+    <button onclick="updateCart(3);">+3</button>
+
+    <button onclick="updateCart(4);">+4</button>
+
+    <button onclick="updateCart(5);">+5</button
+    ><br /><br />
+
+    <button onclick="downCart(1);">Remove from cart</button>
+
+    <button onclick="downCart(2);">-2</button>
+
+    <button onclick="downCart(3);">-3</button>
+
+    <button onclick="downCart(4);">-4</button>
+    <button onclick="downCart(5);">-5</button>
+    <br /><br />
+    <button
+      onclick="
+    cartQuantity=0;
+    document.querySelector('.displayQual2').innerHTML='cart is reset.';
+    document.querySelector('.displayQual').innerHTML='cart Quantity:'+cartQuantity;
+    "
+    >
+      Reset Cart
+    </button>
+    <p class="displayQual"></p>
+    <p class="displayQual2"></p>
+    <script>
+      var cartQuantity = 0;
+    </script>
+  </body>
+</html>

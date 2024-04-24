@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>
+         unique array
+      </title>
+   </head>
+   <body>
+      
+      <script>
+         function findIndex(array,word){
+            for(i=0;i<array.length;i++){
+               if(array[i]===word){
+                  result=i;
+                  break;
+               }else{
+                  result="-1";
+               }
+            }
+            return result;
+         }
+
+
+         let var1=unique(['green','red','blue','red']);
+         console.log(var1);
+
+         let var2=unique(['red','green','green','red']);
+         console.log(var2);
+
+
+         function unique(array){
+            let resultarray=[];
+            let dummy;
+            for(let i=0;i<array.length;i++){
+               for(let j=0;j<array.length;j++){
+                  //console.log(array[i],resultarray[j]);
+                  if(array[i]===resultarray[j]){
+                     dummy=resultarray[j];
+                     continue;
+                  };
+               }
+               if(array[i]===dummy){
+                  continue;
+               }
+               resultarray.push(array[i]);
+            }
+            return resultarray;
+         }
+      </script>
+   </body>
+</html>

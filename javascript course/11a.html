@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>
+         11 A
+      </title>
+   </head>
+   <body>
+      <script>
+         let myArray=[10,20,30];
+         myArray[2]=99;
+         console.log(myArray);
+
+         let var1=getLastvalue([10,20,40]);
+         console.log(var1);
+         let var2=getLastvalue(["value","in","the","forest"]);
+         console.log(var2)
+
+         let var3=arraySwap([10,20,30,40]);
+         console.log(var3);
+         let var4=arraySwap(["hello","my","dear","husband"])
+         console.log(var4);
+
+         for(let index=0;index<=10;index+=2){
+            console.log(index);
+         }
+         for(index=5;index>0;index--){
+            console.log(index);
+         }
+         index=0;
+         while(index<=10){
+            console.log(index);
+            index+=2;
+         }
+         index=5;
+         while(index>0){
+            console.log(index);
+            index--;
+         }
+         myarray=[1,2,3];
+         let myresult=[];
+         for(let i=0;i<myarray.length;i++){
+            myresult[i]=myarray[i]*2;
+         }
+         console.log(myresult);
+
+         let var5=addOne([1,2,3]);
+         console.log(var5);
+         let var6=addOne([10,-5,99,-10]);
+         console.log(var6);
+
+         let var7=addNum([1,2,3,4],5);
+         console.log(var7);
+         let var8=addNum([10,100,-10,-100,0.15],5)
+         console.log(var8);
+
+         let var9=addArray([1,2,3],[1,2,3]);
+         console.log(var9);
+         let var10=addArray([1,4,7],[2,3]);
+         console.log(var10);
+
+         let var11=countPositive([1,5,-2,4,0,-5]);
+         console.log(var11);
+
+         let var12=minMax([6,4,7,0,-1]);
+         console.log(var12);
+         let var13=minMax([]);
+         console.log(var13);
+         let var14=minMax([3]);
+         console.log(var14);
+
+         let var15=countWords(["hello","hey"]);
+         console.log(var15);
+
+         function getLastvalue(array){
+            let i=array.length-1;
+            return array[i];
+         }
+
+         function arraySwap(array){
+            let temp;
+            temp=array[0]
+            array[0]=array[array.length-1];
+            array[array.length-1]=temp;
+            return array;
+         }
+         
+         function addOne(array){
+            let result=[];
+            for(i=0;i<array.length;i++){
+               result[i]=array[i]+1;
+            }
+            return result;
+         }
+
+         function addNum(array,num){
+            let result=[];
+            for(i=0;i<array.length;i++){
+               result[i]=array[i]+num;
+            }
+            return result;
+         }
+
+         function addArray(array1,array2){
+            let result=[];
+            console.log(array1.length);
+            console.log(array2.length);
+            if(array1.length===array2.length){
+               for(i=0;i<array1.length;i++){
+                  result[i]=array1[i]+array2[i];
+            }
+            return result;
+            }return "index is not matching!"
+         }
+
+         function countPositive(num){
+            let result=0;
+            for(i=0;i<num.length;i++){
+               if(num[i]>0){
+                  result++;
+               }
+            }
+            return result;
+         }
+
+         function minMax(nums){
+            let resultObject={min:null,max:null};
+            if(nums.length==1){
+               resultObject.min=resultObject.max=nums[0];
+            }
+            for(i=0;i<nums.length;i++){
+               if(nums[i]<resultObject.min){
+                  
+                  resultObject.min=nums[i];
+               }
+               if(nums[i]>resultObject.max){
+                  resultObject.max=nums[i];
+               }
+               nums[i]=resultObject.min;
+               
+            }
+         return resultObject;
+         }
+
+         function countWords(words){
+            let result={};
+            for(i=0;i<words.length;i++){
+               words[i]=result[i]
+            }
+            return result;
+         }
+      </script>
+      
+   </body>
+</html>

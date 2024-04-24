@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function playGame(guess, result) {
+        result = computerMove();
+        if (guess === result) {
+          console.log("you win !!");
+          score1.wins+=1;
+        } else {
+          console.log("you lose !!");
+          score1.loses+=1;
+        }
+        console.log(score1);
+        localStorage.setItem("score1",JSON.stringify(score1));
+        return score1;
+
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="playGame('heads',rand)">Heads</button>
+    <button onclick="playGame('tails',rand)">Tails</button>
+   <button onclick="localStorage.removeItem('score1')">Clear</button>
+    <script>
+      let score1 = JSON.parse(localStorage.getItem("score1"));
+      if(!score1){
+         score1={wins:0,loses:0};
+      }
+      let rand;
+      function computerMove() {
+        rand = Math.random();
+        
+        if (rand < 0.5) {
+          result = "heads";
+        } else {
+          result = "tails";
+        }
+        return result;
+      }
+    </script>
+  </body>
+</html>

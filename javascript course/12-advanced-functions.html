@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advanced Functions</title>
+  </head>
+  <body>
+   <button onmouseout="" class="push-button">push me</button>
+    <script>
+      const buttonElement=document.querySelector(".push-button");
+
+      const eventListener=()=>{
+         console.log("moved");
+      };
+
+      buttonElement.addEventListener('click',()=>{
+         console.log("button clicked")
+      });
+     
+      buttonElement.addEventListener('mouseout',eventListener)
+      buttonElement.removeEventListener('mouseout',eventListener);
+      /*function greeting() {
+        console.log("hello");
+      }
+      greeting();
+      const function1 = function() {
+        console.log("hello2");
+      };
+      console.log(function1);
+      console.log(typeof(function1));
+      function1();
+
+      const object1={
+         num:2,fun:function(){
+            console.log("hello3");
+         }
+      };
+      object1.fun();
+
+      function display(param){
+         console.log(param);
+      }
+
+      display("hello4");
+
+      function run(param){
+         param();
+      }
+      run(function(){
+         console.log("hello5")
+      })*/
+      /*
+      setTimeout(function(){
+         console.log("timeout");
+         console.log("timeout2")
+      },3000);
+
+      console.log("next line");
+
+      setInterval(function(){
+         console.log("interval")
+      },2000);
+
+      console.log("interval 2");
+      clearInterval()
+      */
+     /*
+      ["hello", "hey", "ciao"].forEach((value,index)=>{
+         if(value==="hey"){
+            return;
+         }
+         console.log(index);
+        console.log(value);
+      });
+
+      const regularFunction=function(param){
+         console.log("hello");
+      }
+      regularFunction('comma');
+      const arrowFunction=(param)=>{
+         console.log("hello");
+      }
+      arrowFunction('commos');
+
+      const oneparam=param=>{
+         console.log(param+1)
+      }
+      oneparam("hello");
+      const oneLine=()=> 2+3
+      console.log(oneLine());
+
+      const object2={
+         method:()=>{
+
+         },
+         method(){
+
+         }
+      };*/
+    </script>
+  </body>
+</html>

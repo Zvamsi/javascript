@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+   <head>
+      <title>
+
+      </title>
+      <script>
+         function greet(name){
+            if (name){
+               console.log(`Hello ${name}`);
+               
+         }else{
+            console.log("Hi there !")
+         }
+      }
+      </script>
+   </head>
+   <body>
+      <script>/*
+         greet("ram");
+         greet("bheema");
+         greet("rakshith");
+         greet("santhosh");
+         greet("Ashok");
+         greet();
+         greet();*/
+
+         //7d
+
+         function convertToFahrenheit(celsius){
+            Fahrenheit=(celsius*9/5)+32
+            return Fahrenheit;
+         }
+         /*fahrenheit=convertToFahrenheit(25);
+         console.log(fahrenheit);
+*/
+         function convertToCelsius(fahrenheit){
+            celsius=(fahrenheit-32)*5/9
+            return celsius;
+         }
+         console.log(convertToCelsius(86));
+
+         function convertTemperature(degrees,unit){
+            if(unit==("C") || (unit=="c")){
+               temp=convertToFahrenheit(degrees);
+               return Math.round(temp)+"F";
+            }else if((unit==="F")||(unit=="f")){
+               temp=convertToCelsius(degrees);
+               return temp+"C";
+            }
+            console.log(temp);
+         }
+         console.log(convertTemperature(25,"c"));
+         console.log(convertTemperature(86,"F"));
+         console.log(convertTemperature(32,"C"));
+      </script>
+   </body>
+</html>

@@ -1,0 +1,35 @@
+.cart{
+   border: none;
+   background-color: rgb(255, 216, 20);
+   border-radius: 25px;
+   padding: 5px 30px;
+}
+.request{
+   background-color: black;
+   color: white;
+   margin-top: 10px;
+   border: none;
+   border-radius: 3px;
+   padding: 5px 10px;
+   font-size: 10px;
+}
+.schedule{
+   background-color: rgb(230, 230, 230);
+   border: none;
+   padding: 5px 10px;
+   font-size: 10px;
+   font-weight: bold;
+   border-radius: 3px;
+   margin-left: 20px;
+}
+.gaming,.music,.tech{
+   border: none;
+   background-color: silver;
+   cursor: pointer;
+   padding: 5px 8px;
+   border-radius: 3px;
+}
+.is-toggled{
+   background-color: black;
+   color: silver;
+}

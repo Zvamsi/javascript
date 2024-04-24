@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>cart quantity</title>
+  </head>
+  <body>
+    <button onclick="console.log('cart quantity:'+ cartQuantity);">Show Quantity</button>
+<br><br>
+    <button onclick=
+    "if(cartQuantity<=0){
+      cartQuantity=0;
+    }
+    cartQuantity++;
+    console.log('cart quantity:'+cartQuantity);
+    ">Add to Cart</button>
+    <button onclick="
+    if(cartQuantity<=0){
+      cartQuantity=0;
+    }
+    cartQuantity=cartQuantity+2;
+    console.log('cart Quantity:'+cartQuantity);
+    ">+2</button>
+
+    <button onclick="
+    if(cartQuantity<=0){
+      cartQuantity=0;
+    }
+    cartQuantity=cartQuantity+3;
+    console.log('cart Quantity:'+cartQuantity);
+    ">+3</button>
+
+    <button onclick="
+    if(cartQuantity<=0){
+      cartQuantity=0;
+    }
+    cartQuantity+=4;
+    console.log('cart Quantity:'+cartQuantity);
+    ">+4</button>
+
+    <button onclick="
+    if(cartQuantity<=0){
+      cartQuantity=0;
+    }
+    cartQuantity+=5;
+    console.log('cart Quantity:'+cartQuantity);
+    ">+5</button><br><br>
+
+    <button onclick="
+    cartQuantity-=1;
+    if(cartQuantity>=0){
+      console.log('cart Quantity:'+cartQuantity);
+    }else{
+      console.log('cart Quantity:'+0);
+    }
+    ">Remove from cart</button>
+
+    <button onclick="
+    cartQuantity-=2;
+    if(cartQuantity>=0){
+      console.log('cart Quantity:'+cartQuantity);
+    }else{
+      console.log('cart Quantity:'+0);
+    }
+    
+    ">-2</button>
+
+    <button onclick="
+    cartQuantity-=3;
+    if(cartQuantity>=0){
+      console.log('cart Quantity:'+cartQuantity);
+    }else{
+      console.log('cart Quantity:'+0);
+    }
+    ">-3</button>
+
+    <button onclick="
+    cartQuantity-=4;
+    if(cartQuantity>=0){
+      console.log('cart Quantity:'+cartQuantity);
+    }else{
+      console.log('cart Quantity:'+0);
+    }
+    ">-4</button>
+    <button onclick="
+    cartQuantity-=5;
+    if(cartQuantity>=0){
+      console.log('cart Quantity:'+cartQuantity);
+    }else{
+      console.log('cart Quantity:'+0);
+    }
+    ">-5</button>  
+    <br><br>
+    <button onclick="
+    cartQuantity=0;
+    console.log('cart is reset.')
+    console.log('cart Quantity:'+cartQuantity);
+    ">Reset Cart</button>
+    <script>
+      var cartQuantity = 0;
+    </script>
+  </body>
+</html>

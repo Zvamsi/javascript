@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+   <head>
+
+   </head>
+   <body>
+      
+      <script>
+         let rand;
+         rand=Math.random();
+         console.log(rand);
+         if(rand<0.5){
+            result='heads';
+         }else{
+            result='tails';
+         }
+         let guess= prompt('enter heads or tails', " ");
+         result===guess ? console.log('you win'):console.log('you lose');
+         
+      </script>
+   </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body{
+       font-family: arial;
+      }
+      .subscribe-button{
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 15px ;
+        padding: 7px 10px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-bottom: 30px;
+      }
+      .is-subscribed{
+        background-color: rgb(222, 220, 220);
+        color: black;
+      }
+      .input{
+        font-size: 15px;
+        padding:10px ;
+      }
+      .calculate-button{
+        background-color: rgb(7, 181, 7);
+        padding: 11px;
+        color: white;
+        border: none;
+        font-size: 15px;
+        cursor: pointer;
+      }
+    </style>
+    <title>DOM projects</title>
+  </head>
+  <body>
+    <p>YouTube Subscribe Button</p>
+    <button class="js-subscribe-button subscribe-button" onclick="subscribe();">
+      Subscribe
+    </button>
+
+    <p>Rock Paper Scissor</p>
+    <a href="09-rock-paper-scissors.html">click here</a>
+
+    <p>Amazon shipping calculator</p>
+    <p>Orders under $40=+$10 Shipping.</p>
+    <p>Orders above&equals $40=Free shipping.<sup style="font-size: 10px;">better to get me:)</sup></p>
+    <input class="js-input input" onkeydown="enterButton(event)"
+     type="text" placeholder="Cost of order"/>
+    <button class="js-calculate-button calculate-button onclick="calculate()">
+      Calculate
+    </button>
+    <p class="js-total"></p>
+
+    <script>
+      function enterButton(event){
+        if(event.key=='Enter'){
+      calculate();
+    }
+      }
+
+      function subscribe() {
+        const buttonElement = document.querySelector(".js-subscribe-button");
+
+        if (buttonElement.innerText === "Subscribe") {
+          buttonElement.innerHTML = "Subscribed";
+          buttonElement.classList.add("is-subscribed");
+        } else {
+          buttonElement.innerHTML = "Subscribe";
+          buttonElement.classList.remove('is-subscribed');
+        }
+      }
+
+      function calculate() {
+        const input = document.querySelector(".js-input");
+        let total=Number(input.value);
+        if(total<40){
+         total=total+10;
+        }
+        document.querySelector('.js-total').innerHTML=`total is ${total}$`
+        total=0;
+      }
+   
+    </script>
+  </body>
+</html>

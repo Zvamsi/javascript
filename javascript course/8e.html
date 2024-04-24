@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>
+         object comparision
+      </title>
+      <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.5/underscore-min.js"></script>
+
+      <script>
+         function isSameProduct(pdt1,pdt2){
+            console.log( _.isEqual (pdt1, pdt2));
+         }
+      </script>
+   </head>
+   <body>
+      
+      <script>
+         let object1={"price":500,name:"heaven"};
+         let object2={name:'heaven',"price":500};
+         isSameProduct(object1,object2);
+      </script>
+   </body>
+</html>

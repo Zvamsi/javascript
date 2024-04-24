@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>
+         11 second half
+      </title>
+   </head>
+   <body>
+      
+      <script>
+      /*   let stringArray=["hello","word","search","good",'search'];
+         let stringArray2=["not","found"];
+         let result;
+         for(let i=0;i<stringArray.length;i++){
+
+            if(stringArray[i]=="search"){
+               result=i;
+               break;
+            }
+         }
+         console.log(result||"-1");
+*/
+         let var1=findIndex(["fuck","word","with","word"],"fuck");
+         console.log(var1);
+
+         let var2=removeEgg(["egg","apple","egg","egg","ham"]);
+         console.log(var2);
+
+         function findIndex(array,word){
+            for(i=0;i<array.length;i++){
+               if(array[i]===word){
+                  result=i;
+                  break;
+               }else{
+                  result="-1";
+               }
+            }
+            return result;
+         }
+
+         function removeEgg(foods){
+            let food=foods.slice();
+           food.reverse();
+            console.log(food);
+            let result=[];
+            for(i=0;i<food.length;i++){
+               if(food[i]=="egg"){
+                  if(i<=3){
+                     continue;
+                  }
+               }
+               result.reverse();
+               result.push(food[i]);
+               result.reverse();
+               console.log(food);
+               console.log(foods);
+               console.log(result);
+            }
+            return result;
+         }
+      </script>
+   </body>
+</html>

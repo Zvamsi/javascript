@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>9th EXE</title>
+  </head>
+  <body>
+    <button>9A</button>
+    <script>
+      let button = document.querySelector("button");
+      console.log(button);
+    </script>
+
+    <!--9B-->
+    <button class="_9b">9B</button>
+    <script>
+      let button2 = document.querySelector("._9b");
+      button2.innerHTML = "9B Done !";
+    </script>
+    <br />
+    <br />
+    <!--9C-->
+    <button class="head" onclick="heads();">heads</button>
+    <button class="tail" onclick="tails();">tails</button>
+    <p class="result"></p>
+
+    <script>
+      let head = document.querySelector(".head");
+      let tail = document.querySelector(".tail");
+      let result = document.querySelector(".result");
+      function heads() {
+        result.innerHTML = `you choose:heads`;
+      }
+      function tails() {
+        result.innerHTML = "you choose:tails";
+      }
+    </script>
+
+    <!--9D-->
+    <input type="text" placeholder="enter name" class="name" onkeydown="keypress(event)" />
+    <input
+      type="button"
+      value="submit"
+      class="submit"
+      onclick="onclick_event();"
+      
+    />
+    <p class="display"></p>
+    <script>
+      function keypress(event){
+         if(event.key=="Enter"){
+            onclick_event();
+         }
+      }
+      function onclick_event() {
+        console.log(document.querySelector(".name").value);
+        //let resulttt=resultt.value;
+        document.querySelector(".display")
+        .innerHTML ="your name is " + document.querySelector(".name").value;
+      }
+    </script>
+  </body>
+</html>
