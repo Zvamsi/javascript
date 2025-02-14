@@ -2,38 +2,46 @@
 <html>
   <head>
     <title>rock-paper-scissors game</title>
-    <link rel="stylesheet" href="styles/12-rock-paper-scissors.css">
+    <link rel="stylesheet" href="styles/12-rock-paper-scissors.css" />
   </head>
   <body>
     <script src="scripts/12-rock-paper-scissors.js"></script>
     <p class="title">Rock Paper Scissors</p>
-    <button  class="button-class " onclick="playGame('rock');">
-      <img class="move-icon " src="images/rock-emoji.png" alt=""></button>
+    <button class="button-class" onclick="playGame('rock');">
+      <img class="move-icon" src="images/rock-emoji.jpg" alt="" />
+    </button>
 
     <button class="button-class" onclick="playGame('paper');">
-      <img class="move-icon" src="images/paper-emoji.png" alt=""></button>
+      <img class="move-icon" src="images/paper-emoji.jpg" alt="" />
+    </button>
 
     <button class="button-class" onclick="playGame('scissors');">
-      <img class="move-icon" src="images/scissors-emoji.png" alt=""></button>
+      <img class="move-icon" src="images/scissors-emoji.jpg" alt="" />
+    </button>
 
-    <button class="button-class"
+    <button
+      class=""
       onclick="
     score.wins=0;
     score.losses=0;
     score.ties=0;
     localStorage.removeItem('score');
+    clearInterval(intervelId);
+  isAutoPlaying = false;
     updateScoreElement();
     document.querySelector('.js-result').innerHTML='';
     document.querySelector('.js-moves').innerHTML='';
+    document.querySelector('.js-score').innerHTML='';
+
     
     "
     >
-      <img src="images/Handskakning.png" class="move-icon" alt="">
+      Reset
     </button>
 
     <p class="js-result result"></p>
     <p class="js-moves moves"></p>
     <p class="js-score score"></p>
-    <button class="auto-play-button" onclick="autoPlay()">Auto Play/Pause</button>
+    <button class="auto-play-button" onclick="autoPlay()">Auto play</button>
   </body>
 </html>

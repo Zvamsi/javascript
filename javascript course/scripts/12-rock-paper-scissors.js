@@ -4,9 +4,9 @@ function pickComputerMove() {
   let computerMove;
   const randomNumber = Math.random();
 
-  if (randomNumber >= 0 && randomNumber <= 1 / 3) {
+  if (randomNumber <= 1 / 3) {
     computerMove = "rock";
-  } else if (randomNumber > 1 / 3 && randomNumber >= 2 / 3) {
+  } else if (randomNumber <= 2 / 3) {
     computerMove = "paper";
   } else {
     computerMove = "scissors";
@@ -57,7 +57,7 @@ function playGame(playerMove) {
   document.querySelector(".js-result").innerText = result;
   document.querySelector(
     ".js-moves"
-  ).innerHTML = `you <img class="move-icon" src="images/${playerMove}-emoji.png" alt=""> computer <img class="move-icon" src="images/${computerMove}-emoji.png" alt="">`;
+  ).innerHTML = `you <img class="move-icon" src="images/${playerMove}-emoji.jpg" alt=""> computer <img class="move-icon" src="images/${computerMove}-emoji.jpg" alt="">`;
 }
 
 let score = JSON.parse(localStorage.getItem("score")) || {
@@ -82,13 +82,15 @@ let intervelId;
 //const autoPlay=()=>{}
 function autoPlay() {
   if (!isAutoPlaying) {
-    intervelId=setInterval(()=> {
-      let playerMove = pickComputerMove();
-      playGame(playerMove);
+    intervelId = setInterval(() => {
+      let computerMove = pickComputerMove();
+      playGame(computerMove);
     }, 500);
-    isAutoPlaying=true;
-  }else{
+    isAutoPlaying = true;
+    document.querySelector(".auto-play-button").innerText = "Pause Auto Play";
+  } else {
     clearInterval(intervelId);
-    isAutoPlaying=false;
+    isAutoPlaying = false;
+    document.querySelector(".auto-play-button").innerText = "Start Auto Play";
   }
 }
